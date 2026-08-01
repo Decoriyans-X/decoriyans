@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../models/product.dart';
 import '../theme/app_theme.dart';
+import '../widgets/brand_logo.dart';
 
 class AboutPage extends StatelessWidget {
   const AboutPage({super.key});
@@ -17,22 +18,14 @@ class AboutPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Image.asset('assets/brand/logo.png', height: 64),
-              const SizedBox(height: 24),
+              const BrandLogo(height: 72),
+              const SizedBox(height: 28),
               Text(
                 'Our Story',
                 style: GoogleFonts.playfairDisplay(
                   fontSize: 36,
                   fontWeight: FontWeight.w600,
                   color: AppColors.tealDark,
-                ),
-              ),
-              const SizedBox(height: 8),
-              Text(
-                SiteConfig.tagline,
-                style: GoogleFonts.greatVibes(
-                  fontSize: 28,
-                  color: AppColors.gold,
                 ),
               ),
               const SizedBox(height: 20),

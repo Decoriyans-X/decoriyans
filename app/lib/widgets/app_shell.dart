@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 
 import '../state/cart_provider.dart';
 import '../theme/app_theme.dart';
+import 'brand_logo.dart';
 
 class AppShell extends StatelessWidget {
   const AppShell({super.key, required this.child});
@@ -24,15 +25,11 @@ class AppShell extends StatelessWidget {
         titleSpacing: wide ? 24 : 0,
         title: InkWell(
           onTap: () => context.go('/'),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Image.asset(
-                'assets/brand/logo.png',
-                height: wide ? 44 : 36,
-                fit: BoxFit.contain,
-              ),
-            ],
+          borderRadius: BorderRadius.circular(10),
+          child: BrandLogo(
+            height: wide ? 40 : 32,
+            showTitle: wide,
+            onDark: true,
           ),
         ),
         actions: [

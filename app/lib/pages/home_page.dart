@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../data/products.dart';
 import '../models/product.dart';
 import '../theme/app_theme.dart';
+import '../widgets/brand_logo.dart';
 import '../widgets/product_card.dart';
 
 class HomePage extends StatelessWidget {
@@ -54,9 +55,9 @@ class HomePage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Image.asset(
-                            'assets/brand/logo.png',
+                          BrandLogo(
                             height: width >= 900 ? 72 : 56,
+                            onDark: true,
                           ),
                           const SizedBox(height: 20),
                           Text(
@@ -296,7 +297,7 @@ class _Footer extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 32, horizontal: 24),
       child: Column(
         children: [
-          Image.asset('assets/brand/logo.png', height: 48),
+          const BrandLogo(height: 48, onDark: true),
           const SizedBox(height: 12),
           Text(
             '© ${DateTime.now().year} Decoriyans · ${SiteConfig.domain}',
