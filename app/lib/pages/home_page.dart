@@ -56,7 +56,7 @@ class HomePage extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           BrandLogo(
-                            height: width >= 900 ? 72 : 56,
+                            height: width >= 900 ? 78 : 58,
                             onDark: true,
                           ),
                           const SizedBox(height: 20),

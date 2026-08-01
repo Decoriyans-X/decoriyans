@@ -27,7 +27,7 @@ class AppShell extends StatelessWidget {
           onTap: () => context.go('/'),
           borderRadius: BorderRadius.circular(10),
           child: BrandLogo(
-            height: wide ? 40 : 32,
+            height: wide ? 42 : 34,
             showTitle: wide,
             onDark: true,
           ),

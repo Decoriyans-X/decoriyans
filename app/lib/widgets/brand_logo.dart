@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../theme/app_theme.dart';
 
-/// Transparent brand assets: icon mark + wordmark title.
+/// Transparent Decoriyans lockup (mark + title) and mark-only variants.
 class BrandLogo extends StatelessWidget {
   const BrandLogo({
     super.key,
@@ -16,8 +16,7 @@ class BrandLogo extends StatelessWidget {
   final bool showMark;
   final bool showTitle;
 
-  /// When true, places the lockup on a cream plate so dark teal
-  /// wordmark text stays readable on teal/dark backgrounds.
+  /// Cream plate behind logo when shown on teal/dark surfaces.
   final bool onDark;
 
   String get _asset {
@@ -39,13 +38,13 @@ class BrandLogo extends StatelessWidget {
 
     return Container(
       padding: EdgeInsets.symmetric(
-        horizontal: height * 0.28,
-        vertical: height * 0.18,
+        horizontal: height * 0.22,
+        vertical: height * 0.14,
       ),
       decoration: BoxDecoration(
-        color: AppColors.cream.withValues(alpha: 0.96),
-        borderRadius: BorderRadius.circular(height * 0.22),
-        border: Border.all(color: AppColors.gold.withValues(alpha: 0.35)),
+        color: AppColors.cream.withValues(alpha: 0.97),
+        borderRadius: BorderRadius.circular(height * 0.2),
+        border: Border.all(color: AppColors.gold.withValues(alpha: 0.3)),
       ),
       child: image,
     );
