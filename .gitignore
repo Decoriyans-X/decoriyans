@@ -1,11 +1,42 @@
-node_modules/
-.env
-.env.*
-*.tfvars
-!*.tfvars.example
+# Flutter
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+build/
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.flutter-plugins
+.flutter-plugins-dependencies
+**/android/.gradle/
+**/android/local.properties
+**/android/**/GeneratedPluginRegistrant.*
+**/ios/Pods/
+**/ios/.symlinks/
+**/macos/Flutter/ephemeral/
+**/linux/flutter/ephemeral/
+**/windows/flutter/ephemeral/
+
+# Legacy stacks (replaced by Flutter)
+web/node_modules/
+web/.next/
+web/out/
+mobile/node_modules/
+mobile/.expo/
+
+# Terraform
 .terraform/
 *.tfstate
 *.tfstate.*
+*.tfvars
+!*.tfvars.example
 .terraform.lock.hcl
+
+# Env / OS
+.env
+.env.*
 .DS_Store
 Thumbs.db
+*.iml
+.idea/
+.vscode/
